@@ -73,14 +73,15 @@ function App() {
 
   let status;
   if (winner === 'draw') {
-    status = 'Match draw!(Automatic reload in 2 seconds)';
+    status = 'Match draw!';
   } else if (winner) {
-    status = `Winner: ${winner}` + `(Automatic reload in 2 seconds)`;
+    status = `Winner: ${winner}`;
   } else {
     status = `Next player: ${player}`;
   }
 
   return (
+    <div className='main'>
     <div className='whole'>
       <h1>Tic-Tac-Toe</h1>
       <div className='container'>
@@ -104,6 +105,7 @@ function App() {
         X Wins: {xWins} | O Wins: {oWins}
       </div>
       </div>
+    </div>
     </div>
   );
 }
